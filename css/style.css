@@ -20,9 +20,12 @@ section {
   height: 100vh;
   width: 100%;
   background-color: #0b0c11;
+  overflow: hidden;
 }
 
 section nav {
+  position: absolute;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,14 +37,13 @@ section nav {
           align-items: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  padding: 0 2rem;
 }
 
 section nav #logo {
-  margin-right: auto;
   color: #fff;
   font-weight: 600;
   font-size: 1rem;
+  margin: 0 3rem;
 }
 
 section nav ul {
@@ -97,5 +99,39 @@ section nav ul li button:hover {
   color: #0b0c11;
   background-color: #68fbf1;
   border-color: #68fbf1;
+}
+
+section .div-1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+section .div-1 .inner-div-1 {
+  padding: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section .div-1 .inner-div-1 .intro {
+  color: #c5c6cc;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+section .div-1 .inner-div-1 .intro .iam {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #68fbf1;
 }
 /*# sourceMappingURL=style.css.map */

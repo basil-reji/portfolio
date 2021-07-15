@@ -7,19 +7,21 @@ section{
     height: 100vh;
     width: 100%;
     background-color: $color5;
+    overflow: hidden;
     nav{
+        position: absolute;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         font-family: $font1;
         font-weight: 500;
-        padding: 0 2rem;
 
         #logo{
-            margin-right: auto;
             color: #fff;
             font-weight: 600;
             font-size: 1rem;
+            margin: 0 3rem;
         }
         ul{
             display: flex;
@@ -62,6 +64,30 @@ section{
                     color: $color5;
                     background-color: $color2;
                     border-color: $color2;
+                }
+            }
+        }
+    }
+    .div-1{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: auto;
+        .inner-div-1{
+            padding: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .intro{
+                color: $color1;
+                font-size: 2.5rem;
+                font-weight: 500;
+                .iam{
+                    font-family: $font2;
+                    font-weight: 700;
+                    color: $color2;
+                    .iam-content{
+                        
+                    }
                 }
             }
         }
