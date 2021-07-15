@@ -1,7 +1,7 @@
 @import "./scss/theme";
 
 // fonts used   - $font1 $font2
-// Colors used  - $color1 $color2 $color3 $color4 $color5 $color6
+// Colors used  - $color1 $color2 $color3 $color4 $color5
 
 *{
     margin: 0;
@@ -12,3 +12,5 @@ body{
     background-color: $color1;
     font-family: $font2;
 }
+
+@import "./scss/index"
