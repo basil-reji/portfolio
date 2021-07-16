@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+
+//font-family: 'Otomanopee One', sans-serif;
+
 body{
     background-color: $color1;
     font-family: $font2;
@@ -9,6 +13,7 @@ section{
     background-color: $color5;
     overflow: hidden;
     nav{
+        z-index: 1;
         position: absolute;
         width: 100%;
         display: flex;
@@ -74,24 +79,64 @@ section{
     }
     .div-1{
         display: grid;
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 50% 50%;
         grid-template-rows: auto;
         .inner-div-1{
-            padding: 5rem;
             display: flex;
             align-items: center;
             justify-content: center;
+            height: 100vh;
             .intro{
                 color: $color1;
                 font-size: 2.5rem;
-                font-weight: 500;
+                font-weight: 700;
                 .iam{
-                    font-family: $font2;
-                    font-weight: 700;
+                    display: inline-block;
+                    cursor: pointer;
+                    font-family: 'Otomanopee One', sans-serif;
+                    font-weight: 600;
+                    font-size: 3.5rem;
                     color: $color2;
                     .iam-content{
+                        @import "./effects/2d-transitions/wobble-skew";
+                        @include wobble-skew();
                         color: $color2;
+                        transition: 0.3s ease-in-out;
                     }
+                }
+                .desig{
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+                #getintouch{
+                    width: 40%;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    padding: 0.5rem;
+                    color: $color2;
+                    border: 2px solid;
+                    border-radius: 0.3em;
+                    transition: 0.3s ease-in-out;
+                }
+                #getintouch:hover{
+                    color: $color4;
+                    background-color: $color2;
+                }
+            }
+            .img-developer{
+                position: relative;
+                bottom: 0;
+                width: 100%;
+                padding-top: 10rem;
+                height: auto;
+                padding-inline: 5%;
+                bottom: -2rem;
+                #svg-developer{
+                    position: relative;
+                    width: 90%;
                 }
             }
         }
