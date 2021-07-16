@@ -29,42 +29,46 @@ section{
             align-items: center;
             margin-left: auto;
             li{
+                
                 list-style: none;
                 text-decoration: none;
-                padding:1rem 1.5rem;
+                padding:0.5rem 1.5rem;
                 a{
+                    @import "./effects/border-transitions/underline-from-center";
+                    @include underline-from-center();
                     padding:1rem 0.5rem;
                     cursor: pointer;
                     text-decoration: none;
                     font-weight: 600;
                     color: $color1;
-                    transition: 0.3s ease-in-out;
                 }
                 button{
+                    @import "./effects/background-transitions/shutter-out-horizontal";
+                    @include shutter-out-horizontal();
                     display: inline-block;
                     cursor: pointer;
                     background:none;
                     border: 0.2rem solid $color1;
-                    border-radius: 1rem;
+                    //border-radius: 1rem;
                     padding: 0.3rem 0.6rem;
 
                     color: $color1;
                     font-family: $font1;
                     font-size: 1rem;
                     font-weight: 600;
-                    
-                    transition: 0.3s ease-in-out;
                 }
                 /* Animation */
 
                 a:hover{
                     color: $color2;
                 }
+                /*
                 button:hover{
                     color: $color5;
                     background-color: $color2;
                     border-color: $color2;
                 }
+                */
             }
         }
     }
@@ -86,7 +90,7 @@ section{
                     font-weight: 700;
                     color: $color2;
                     .iam-content{
-                        
+                        color: $color2;
                     }
                 }
             }

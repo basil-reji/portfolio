@@ -9,3 +9,7 @@ $color2: rgba($color: #68fbf1, $alpha: 1.0);
 $color3: rgba($color: #47a299, $alpha: 1.0);
 $color4: rgba($color: #212733, $alpha: 1.0);
 $color5: rgba($color: #0b0c11, $alpha: 1.0);
+
+@import "./animation-support/hacks";
+@import "./animation-support/mixins";
+@import "./animation-support/options";
