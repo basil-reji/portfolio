@@ -32,7 +32,7 @@ canvas {
   background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13), transparent), radial-gradient(circle at 20% 80%, #212733, transparent);
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -1;
 }
 
