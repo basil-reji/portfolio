@@ -10,7 +10,7 @@ body{
 section{
     height: 100vh;
     width: 100%;
-    background-color: $color5;
+    background: rgba($color: $color5, $alpha: 0.8) ;
     overflow: hidden;
     .nav-bar{
         z-index: 1;
