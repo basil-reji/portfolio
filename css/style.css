@@ -1,6 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap");
+html {
+  font-size: 13px;
+}
+
+@media screen and (min-width: 900px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -39,6 +55,7 @@ section .nav-bar {
           align-items: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  font-size: 0.9rem;
 }
 
 section .nav-bar #logo {
@@ -139,7 +156,7 @@ section .nav-bar ul li button {
   padding: 0.3rem 0.6rem;
   color: #c5c6cc;
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
@@ -196,6 +213,7 @@ section .div-1 .inner-div-1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10% 0;
   overflow: hidden;
 }
 
@@ -298,6 +316,20 @@ section .div-1 .inner-div-1 .intro .desig {
 }
 
 section .div-1 .inner-div-1 .intro #getintouch {
+  /* Forward */
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
   width: 40%;
   font-size: 1rem;
   font-weight: 400;
@@ -314,6 +346,11 @@ section .div-1 .inner-div-1 .intro #getintouch {
   border-radius: 0.3em;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+}
+
+section .div-1 .inner-div-1 .intro #getintouch:hover, section .div-1 .inner-div-1 .intro #getintouch:focus, section .div-1 .inner-div-1 .intro #getintouch:active {
+  -webkit-transform: translateX(8px);
+  transform: translateX(8px);
 }
 
 section .div-1 .inner-div-1 .intro #getintouch:hover {
