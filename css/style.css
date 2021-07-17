@@ -21,9 +21,10 @@ section {
   height: 100vh;
   width: 100%;
   background-color: #0b0c11;
+  overflow: hidden;
 }
 
-section nav {
+section .nav-bar {
   z-index: 1;
   position: absolute;
   width: 100%;
@@ -40,14 +41,14 @@ section nav {
   font-weight: 500;
 }
 
-section nav #logo {
+section .nav-bar #logo {
   color: #fff;
   font-weight: 600;
   font-size: 1rem;
   margin: 0 3rem;
 }
 
-section nav ul {
+section .nav-bar ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,7 +61,7 @@ section nav ul {
   margin-left: auto;
 }
 
-section nav ul li {
+section .nav-bar ul li {
   list-style: none;
   text-decoration: none;
   padding: 0.5rem 1.5rem;
@@ -74,11 +75,11 @@ section nav ul li {
                 */
 }
 
-section nav ul li .nav-active {
+section .nav-bar ul li .nav-active {
   color: #68fbf1;
 }
 
-section nav ul li a {
+section .nav-bar ul li a {
   /* Underline From Center */
   display: inline-block;
   vertical-align: middle;
@@ -95,7 +96,7 @@ section nav ul li a {
   color: #c5c6cc;
 }
 
-section nav ul li a:before {
+section .nav-bar ul li a:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -112,12 +113,12 @@ section nav ul li a:before {
   transition-timing-function: ease-out;
 }
 
-section nav ul li a:hover:before, section nav ul li a:focus:before, section nav ul li a:active:before {
+section .nav-bar ul li a:hover:before, section .nav-bar ul li a:focus:before, section .nav-bar ul li a:active:before {
   left: 0;
   right: 0;
 }
 
-section nav ul li button {
+section .nav-bar ul li button {
   /* Shutter Out Horizontal */
   display: inline-block;
   vertical-align: middle;
@@ -142,7 +143,7 @@ section nav ul li button {
   font-weight: 600;
 }
 
-section nav ul li button:before {
+section .nav-bar ul li button:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -166,40 +167,35 @@ section nav ul li button:before {
   transition-timing-function: ease-out;
 }
 
-section nav ul li button:hover, section nav ul li button:focus, section nav ul li button:active {
+section .nav-bar ul li button:hover, section .nav-bar ul li button:focus, section .nav-bar ul li button:active {
   color: #0b0c11;
   border-color: #68fbf1;
 }
 
-section nav ul li button:hover:before, section nav ul li button:focus:before, section nav ul li button:active:before {
+section .nav-bar ul li button:hover:before, section .nav-bar ul li button:focus:before, section .nav-bar ul li button:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
-section nav ul li a:hover {
+section .nav-bar ul li a:hover {
   color: #68fbf1;
 }
 
 section .div-1 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
+  height: 100%;
+  width: 100%;
 }
 
 section .div-1 .inner-div-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
 }
 
@@ -325,16 +321,28 @@ section .div-1 .inner-div-1 .intro #getintouch:hover {
   background-color: #68fbf1;
 }
 
-section .div-1 .inner-div-1 .img-developer {
-  position: relative;
-  width: 100%;
-  padding-top: 10rem;
-  height: auto;
-  padding-inline: 5%;
-  bottom: 0rem;
+section .div-1 .inner-div-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-section .div-1 .inner-div-1 .img-developer #svg-developer {
+section .div-1 .inner-div-2 .img-developer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: auto;
+  padding-inline: 5%;
+}
+
+section .div-1 .inner-div-2 .img-developer #svg-developer {
   position: relative;
   width: 90%;
   bottom: 0rem;

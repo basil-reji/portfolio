@@ -11,7 +11,8 @@ section{
     height: 100vh;
     width: 100%;
     background-color: $color5;
-    nav{
+    overflow: hidden;
+    .nav-bar{
         z-index: 1;
         position: absolute;
         width: 100%;
@@ -79,14 +80,12 @@ section{
         }
     }
     .div-1{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: auto;
+        height: 100%;
+        width: 100%;
         .inner-div-1{
             display: flex;
-            align-items: center;
             justify-content: center;
-            height: 100vh;
+            align-items: center;
             .intro{
                 color: $color1;
                 font-size: 2.5rem;
@@ -128,13 +127,16 @@ section{
                 }
             }
             overflow: hidden;
+        }
+        .inner-div-2{
+            display: flex;
             .img-developer{
-                position: relative;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
                 width: 100%;
-                padding-top: 10rem;
                 height: auto;
                 padding-inline: 5%;
-                bottom: 0rem;
                 #svg-developer{
                     position: relative;
                     width: 90%;
