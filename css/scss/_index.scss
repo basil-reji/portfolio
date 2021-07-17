@@ -23,12 +23,16 @@ section{
         font-weight: 500;
         font-size: 0.9rem;
         #logo{
+            position: absolute;
+            left: 10px;
+            top: 20px;
             color: #fff;
             font-weight: 600;
             font-size: 1rem;
             margin: 0 3rem;
+            z-index: 1;
         }
-        ul{
+        .nav_links{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -96,7 +100,7 @@ section{
                     cursor: pointer;
                     font-family: 'Otomanopee One', sans-serif;
                     font-weight: 600;
-                    font-size: 3.5rem;
+                    font-size: 3rem;
                     color: $color2;
                     .iam-content{
                         @import "./effects/2d-transitions/wobble-skew";
@@ -147,5 +151,57 @@ section{
                 }
             }
         }
+    }
+}
+@media screen and (max-width:1200px) {
+    .nav-bar{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        .nav_links{
+            position: absolute;
+            flex-direction: column;
+            background-color: rgba($color: #303746, $alpha: 1.0);
+            height: 100%;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            li{
+                a{
+                    font-size: 1.3rem;
+                }
+                button{
+                    font-size: 1.3rem;
+                }
+            }
+            clip-path: circle(0px at 100% 0);
+            transition: all 1s ease-in-out;
+            z-index: 1;
+        }
+        .nav_links.open{
+            clip-path: circle(1200px at 100% 0);
+        }
+    }
+    .hamburger
+    {
+        position: absolute;
+        cursor: pointer;
+        right: 2em;
+        top: 1em;
+        z-index: 1;
+        .hamburger_line{
+            margin: 0.3em;
+            height: 0.3em;
+            width: 2em;
+            background-color: $color1;
+        }
+    }
+    .inner-div-1{
+        padding: 0;
+        align-items: flex-end;
+        height: 60vh;
+    }
+    .inner-div-2{
+        height: 40vh;
     }
 }

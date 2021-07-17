@@ -59,13 +59,17 @@ section .nav-bar {
 }
 
 section .nav-bar #logo {
+  position: absolute;
+  left: 10px;
+  top: 20px;
   color: #fff;
   font-weight: 600;
   font-size: 1rem;
   margin: 0 3rem;
+  z-index: 1;
 }
 
-section .nav-bar ul {
+section .nav-bar .nav_links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,7 +82,7 @@ section .nav-bar ul {
   margin-left: auto;
 }
 
-section .nav-bar ul li {
+section .nav-bar .nav_links li {
   list-style: none;
   text-decoration: none;
   padding: 0.5rem 1.5rem;
@@ -92,11 +96,11 @@ section .nav-bar ul li {
                 */
 }
 
-section .nav-bar ul li .nav-active {
+section .nav-bar .nav_links li .nav-active {
   color: #68fbf1;
 }
 
-section .nav-bar ul li a {
+section .nav-bar .nav_links li a {
   /* Underline From Center */
   display: inline-block;
   vertical-align: middle;
@@ -113,7 +117,7 @@ section .nav-bar ul li a {
   color: #c5c6cc;
 }
 
-section .nav-bar ul li a:before {
+section .nav-bar .nav_links li a:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -130,12 +134,12 @@ section .nav-bar ul li a:before {
   transition-timing-function: ease-out;
 }
 
-section .nav-bar ul li a:hover:before, section .nav-bar ul li a:focus:before, section .nav-bar ul li a:active:before {
+section .nav-bar .nav_links li a:hover:before, section .nav-bar .nav_links li a:focus:before, section .nav-bar .nav_links li a:active:before {
   left: 0;
   right: 0;
 }
 
-section .nav-bar ul li button {
+section .nav-bar .nav_links li button {
   /* Shutter Out Horizontal */
   display: inline-block;
   vertical-align: middle;
@@ -160,7 +164,7 @@ section .nav-bar ul li button {
   font-weight: 600;
 }
 
-section .nav-bar ul li button:before {
+section .nav-bar .nav_links li button:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -184,17 +188,17 @@ section .nav-bar ul li button:before {
   transition-timing-function: ease-out;
 }
 
-section .nav-bar ul li button:hover, section .nav-bar ul li button:focus, section .nav-bar ul li button:active {
+section .nav-bar .nav_links li button:hover, section .nav-bar .nav_links li button:focus, section .nav-bar .nav_links li button:active {
   color: #0b0c11;
   border-color: #68fbf1;
 }
 
-section .nav-bar ul li button:hover:before, section .nav-bar ul li button:focus:before, section .nav-bar ul li button:active:before {
+section .nav-bar .nav_links li button:hover:before, section .nav-bar .nav_links li button:focus:before, section .nav-bar .nav_links li button:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
-section .nav-bar ul li a:hover {
+section .nav-bar .nav_links li a:hover {
   color: #68fbf1;
 }
 
@@ -228,7 +232,7 @@ section .div-1 .inner-div-1 .intro .iam {
   cursor: pointer;
   font-family: 'Otomanopee One', sans-serif;
   font-weight: 600;
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: #68fbf1;
 }
 
@@ -383,5 +387,65 @@ section .div-1 .inner-div-2 .img-developer #svg-developer {
   position: relative;
   width: 90%;
   bottom: 0rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-bar {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+  }
+  .nav-bar .nav_links {
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #303746;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-clip-path: circle(0px at 100% 0);
+            clip-path: circle(0px at 100% 0);
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    z-index: 1;
+  }
+  .nav-bar .nav_links li a {
+    font-size: 1.3rem;
+  }
+  .nav-bar .nav_links li button {
+    font-size: 1.3rem;
+  }
+  .nav-bar .nav_links.open {
+    -webkit-clip-path: circle(1200px at 100% 0);
+            clip-path: circle(1200px at 100% 0);
+  }
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 2em;
+    top: 1em;
+    z-index: 1;
+  }
+  .hamburger .hamburger_line {
+    margin: 0.3em;
+    height: 0.3em;
+    width: 2em;
+    background-color: #c5c6cc;
+  }
+  .inner-div-1 {
+    padding: 0;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 60vh;
+  }
+  .inner-div-2 {
+    height: 40vh;
+  }
 }
 /*# sourceMappingURL=style.css.map */
