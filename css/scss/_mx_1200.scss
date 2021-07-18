@@ -1,5 +1,5 @@
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1024px) {
     .s1{
         .nav-bar{
             width: 100%;
@@ -49,7 +49,7 @@
                 z-index: 1;
             }
             .nav_links.open{
-                clip-path: circle(1200px at 100% 0);
+                clip-path: circle(2000px at 100% 0);
             }
         }
         .hamburger
