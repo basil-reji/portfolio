@@ -26,7 +26,6 @@
 	&:focus,
 	&:active {
 		color: $color5;
-		border-color: $color2;
 		&:before {
 			@include prefixed(transform, scaleX(1));
 		}

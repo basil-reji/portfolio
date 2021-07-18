@@ -95,13 +95,6 @@ section .nav-bar .nav_links li {
   text-decoration: none;
   padding: 0.5rem 1.5rem;
   /* Animation */
-  /*
-                button:hover{
-                    color: $color5;
-                    background-color: $color2;
-                    border-color: $color2;
-                }
-                */
 }
 
 section .nav-bar .nav_links li .nav-active {
@@ -198,7 +191,6 @@ section .nav-bar .nav_links li button:before {
 
 section .nav-bar .nav_links li button:hover, section .nav-bar .nav_links li button:focus, section .nav-bar .nav_links li button:active {
   color: #0b0c11;
-  border-color: #68fbf1;
 }
 
 section .nav-bar .nav_links li button:hover:before, section .nav-bar .nav_links li button:focus:before, section .nav-bar .nav_links li button:active:before {
@@ -208,6 +200,10 @@ section .nav-bar .nav_links li button:hover:before, section .nav-bar .nav_links 
 
 section .nav-bar .nav_links li a:hover {
   color: #68fbf1;
+}
+
+section .nav-bar .nav_links li button:hover {
+  border-color: #68fbf1;
 }
 
 section .div-1 {
@@ -494,6 +490,13 @@ section .div-1 .inner-div-2 .img-developer #svg-developer {
   }
   .s1 .div-1 .inner-div-2 {
     height: 40vh;
+  }
+  .s1 .div-1 .img-developer #svg-developer {
+    position: relative;
+    width: 95%;
+    height: auto;
+    max-height: 125%;
+    bottom: 0rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
