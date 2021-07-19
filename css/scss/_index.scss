@@ -46,10 +46,8 @@ canvas {
     background: rgba($color: $color5, $alpha: 0.8) ;
     overflow: hidden;
     .nav-bar{
-        z-index: 5;
         position: absolute;
         width: 100%;
-        max-height: 5rem;
         display: flex;
         justify-content: center;
         align-items: center;

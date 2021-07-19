@@ -10,6 +10,7 @@
                 top: 2rem;  
             }
             .nav_links{
+                z-index: 1;
                 position: absolute;
                 background-color: $color4;
                 height: 100%;
@@ -46,7 +47,7 @@
                 }
                 clip-path: circle(0px at 100% 0);
                 transition: all 1s ease-in-out;
-                z-index: 1;
+                z-index: 2;
             }
             .nav_links.open{
                 clip-path: circle(2000px at 100% 0);
@@ -58,7 +59,7 @@
             cursor: pointer;
             right: 2em;
             top: 1em;
-            z-index: 1;
+            z-index: 5;
             .hamburger_line{
                 margin: 0.3em;
                 height: 0.3em;
