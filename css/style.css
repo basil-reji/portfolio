@@ -35,6 +35,48 @@ canvas {
   z-index: -1;
 }
 
+.social_media {
+  z-index: 2;
+  max-width: 5rem;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social_media .sm .sm-btn {
+  height: 3rem;
+  width: 4rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #c5c6cc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.social_media .sm .sm-btn:hover {
+  color: #68fbf1;
+}
+
 .s1 {
   height: 100vh;
   width: 100%;
