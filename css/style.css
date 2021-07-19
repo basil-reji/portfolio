@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap");
 html {
+  overflow-x: hidden;
   font-size: 13px;
 }
 
@@ -36,20 +37,14 @@ canvas {
   z-index: -1;
 }
 
-body {
-  background-color: #c5c6cc;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-}
-
-section {
+.s1 {
   height: 100vh;
   width: 100%;
   background: rgba(11, 12, 17, 0.8);
   overflow: hidden;
 }
 
-section .nav-bar {
+.s1 .nav-bar {
   z-index: 1;
   position: absolute;
   width: 100%;
@@ -67,7 +62,7 @@ section .nav-bar {
   font-size: 0.9rem;
 }
 
-section .nav-bar #logo {
+.s1 .nav-bar #logo {
   position: absolute;
   left: 10px;
   top: 20px;
@@ -77,7 +72,7 @@ section .nav-bar #logo {
   z-index: 1;
 }
 
-section .nav-bar .nav_links {
+.s1 .nav-bar .nav_links {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,18 +85,18 @@ section .nav-bar .nav_links {
           align-items: center;
 }
 
-section .nav-bar .nav_links li {
+.s1 .nav-bar .nav_links li {
   list-style: none;
   text-decoration: none;
   padding: 0.5rem 1.5rem;
   /* Animation */
 }
 
-section .nav-bar .nav_links li .nav-active {
+.s1 .nav-bar .nav_links li .nav-active {
   color: #68fbf1;
 }
 
-section .nav-bar .nav_links li a {
+.s1 .nav-bar .nav_links li a {
   /* Underline From Center */
   display: inline-block;
   vertical-align: middle;
@@ -118,7 +113,7 @@ section .nav-bar .nav_links li a {
   color: #c5c6cc;
 }
 
-section .nav-bar .nav_links li a:before {
+.s1 .nav-bar .nav_links li a:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -135,12 +130,12 @@ section .nav-bar .nav_links li a:before {
   transition-timing-function: ease-out;
 }
 
-section .nav-bar .nav_links li a:hover:before, section .nav-bar .nav_links li a:focus:before, section .nav-bar .nav_links li a:active:before {
+.s1 .nav-bar .nav_links li a:hover:before, .s1 .nav-bar .nav_links li a:focus:before, .s1 .nav-bar .nav_links li a:active:before {
   left: 0;
   right: 0;
 }
 
-section .nav-bar .nav_links li button {
+.s1 .nav-bar .nav_links li button {
   /* Shutter Out Horizontal */
   display: inline-block;
   vertical-align: middle;
@@ -165,7 +160,7 @@ section .nav-bar .nav_links li button {
   font-weight: 600;
 }
 
-section .nav-bar .nav_links li button:before {
+.s1 .nav-bar .nav_links li button:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -189,29 +184,29 @@ section .nav-bar .nav_links li button:before {
   transition-timing-function: ease-out;
 }
 
-section .nav-bar .nav_links li button:hover, section .nav-bar .nav_links li button:focus, section .nav-bar .nav_links li button:active {
+.s1 .nav-bar .nav_links li button:hover, .s1 .nav-bar .nav_links li button:focus, .s1 .nav-bar .nav_links li button:active {
   color: #0b0c11;
 }
 
-section .nav-bar .nav_links li button:hover:before, section .nav-bar .nav_links li button:focus:before, section .nav-bar .nav_links li button:active:before {
+.s1 .nav-bar .nav_links li button:hover:before, .s1 .nav-bar .nav_links li button:focus:before, .s1 .nav-bar .nav_links li button:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
-section .nav-bar .nav_links li a:hover {
+.s1 .nav-bar .nav_links li a:hover {
   color: #68fbf1;
 }
 
-section .nav-bar .nav_links li button:hover {
+.s1 .nav-bar .nav_links li button:hover {
   border-color: #68fbf1;
 }
 
-section .div-1 {
+.s1 .div-1 {
   height: 100%;
   width: 100%;
 }
 
-section .div-1 .inner-div-1 {
+.s1 .div-1 .inner-div-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,13 +220,13 @@ section .div-1 .inner-div-1 {
   overflow: hidden;
 }
 
-section .div-1 .inner-div-1 .intro {
+.s1 .div-1 .inner-div-1 .intro {
   color: #c5c6cc;
   font-size: 2.5rem;
   font-weight: 700;
 }
 
-section .div-1 .inner-div-1 .intro .iam {
+.s1 .div-1 .inner-div-1 .intro .iam {
   display: inline-block;
   cursor: pointer;
   font-family: 'Otomanopee One', sans-serif;
@@ -240,7 +235,7 @@ section .div-1 .inner-div-1 .intro .iam {
   color: #68fbf1;
 }
 
-section .div-1 .inner-div-1 .intro .iam .iam-content {
+.s1 .div-1 .inner-div-1 .intro .iam .iam-content {
   /* Wobble Skew */
   display: inline-block;
   vertical-align: middle;
@@ -307,7 +302,7 @@ section .div-1 .inner-div-1 .intro .iam .iam-content {
   }
 }
 
-section .div-1 .inner-div-1 .intro .iam .iam-content:hover, section .div-1 .inner-div-1 .intro .iam .iam-content:focus, section .div-1 .inner-div-1 .intro .iam .iam-content:active {
+.s1 .div-1 .inner-div-1 .intro .iam .iam-content:hover, .s1 .div-1 .inner-div-1 .intro .iam .iam-content:focus, .s1 .div-1 .inner-div-1 .intro .iam .iam-content:active {
   -webkit-animation-name: hvr-wobble-skew;
   animation-name: hvr-wobble-skew;
   -webkit-animation-duration: 1s;
@@ -318,12 +313,12 @@ section .div-1 .inner-div-1 .intro .iam .iam-content:hover, section .div-1 .inne
   animation-iteration-count: 1;
 }
 
-section .div-1 .inner-div-1 .intro .desig {
+.s1 .div-1 .inner-div-1 .intro .desig {
   font-size: 1rem;
   font-weight: 400;
 }
 
-section .div-1 .inner-div-1 .intro #getintouch {
+.s1 .div-1 .inner-div-1 .intro #getintouch {
   /* Forward */
   display: inline-block;
   vertical-align: middle;
@@ -356,23 +351,23 @@ section .div-1 .inner-div-1 .intro #getintouch {
   transition: 0.3s ease-in-out;
 }
 
-section .div-1 .inner-div-1 .intro #getintouch:hover, section .div-1 .inner-div-1 .intro #getintouch:focus, section .div-1 .inner-div-1 .intro #getintouch:active {
+.s1 .div-1 .inner-div-1 .intro #getintouch:hover, .s1 .div-1 .inner-div-1 .intro #getintouch:focus, .s1 .div-1 .inner-div-1 .intro #getintouch:active {
   -webkit-transform: translateX(8px);
   transform: translateX(8px);
 }
 
-section .div-1 .inner-div-1 .intro #getintouch:hover {
+.s1 .div-1 .inner-div-1 .intro #getintouch:hover {
   color: #212733;
   background-color: #68fbf1;
 }
 
-section .div-1 .inner-div-2 {
+.s1 .div-1 .inner-div-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-section .div-1 .inner-div-2 .img-developer {
+.s1 .div-1 .inner-div-2 .img-developer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,7 +382,7 @@ section .div-1 .inner-div-2 .img-developer {
   padding-inline: 5%;
 }
 
-section .div-1 .inner-div-2 .img-developer #svg-developer {
+.s1 .div-1 .inner-div-2 .img-developer #svg-developer {
   position: relative;
   width: 95%;
   height: auto;

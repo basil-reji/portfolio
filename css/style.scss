@@ -1,14 +1,15 @@
-html {
-    font-size: 13px;
+html{
+  overflow-x: hidden;
+  font-size: 13px;
       
-    @media screen and (min-width: 900px) {
-      font-size: 16px;
-    }
-      
-    @media screen and (min-width: 1200px) {
-      font-size: 18px;
-    }
+  @media screen and (min-width: 900px) {
+    font-size: 16px;
   }
+      
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
+}
 
 
 
@@ -18,14 +19,15 @@ html {
 // Colors used  - $color1 $color2 $color3 $color4 $color5
 
 *{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body{
-    background-color: $color1;
-    font-family: $font2;
+  background-color: $color1;
+  font-family: $font2;
 }
+
 canvas {
   background-color: #000;
   background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),transparent),
