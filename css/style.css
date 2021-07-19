@@ -88,6 +88,7 @@ canvas {
   z-index: 5;
   position: absolute;
   width: 100%;
+  max-height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
