@@ -62,12 +62,17 @@ canvas {
 
 .s1 .nav-bar #logo {
   position: absolute;
-  left: 10px;
-  top: 20px;
+  left: 1.5rem;
+  top: 1rem;
   color: #fff;
   font-weight: 600;
   font-size: 1rem;
   z-index: 1;
+}
+
+.s1 .nav-bar #logo #br_logo {
+  height: auto;
+  width: 2.7rem;
 }
 
 .s1 .nav-bar .nav_links {
