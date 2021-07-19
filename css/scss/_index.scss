@@ -26,8 +26,8 @@
             font-size: 1rem;
             z-index: 1;
             #br_logo{
-                height: auto;
                 width: 2.7rem;
+                height: auto;
             }
         }
         .nav_links{
@@ -65,6 +65,7 @@
                     font-family: $font1;
                     font-size: 0.9rem;
                     font-weight: 600;
+                    transition: 0.3s ease-in-out;
                 }
                 /* Animation */
 
@@ -110,6 +111,7 @@
                 #getintouch{
                     @import "./effects/2d-transitions/forward";
                     @include forward();
+                    background:none;
                     width: 9rem;
                     font-size: 1rem;
                     font-weight: 400;

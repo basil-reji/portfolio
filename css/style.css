@@ -71,8 +71,8 @@ canvas {
 }
 
 .s1 .nav-bar #logo #br_logo {
-  height: auto;
   width: 2.7rem;
+  height: auto;
 }
 
 .s1 .nav-bar .nav_links {
@@ -161,6 +161,8 @@ canvas {
   font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .s1 .nav-bar .nav_links li button:before {
@@ -187,11 +189,11 @@ canvas {
   transition-timing-function: ease-out;
 }
 
-.s1 .nav-bar .nav_links li button:hover, .s1 .nav-bar .nav_links li button:focus, .s1 .nav-bar .nav_links li button:active {
+.s1 .nav-bar .nav_links li button:hover {
   color: #0b0c11;
 }
 
-.s1 .nav-bar .nav_links li button:hover:before, .s1 .nav-bar .nav_links li button:focus:before, .s1 .nav-bar .nav_links li button:active:before {
+.s1 .nav-bar .nav_links li button:hover:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
@@ -336,6 +338,7 @@ canvas {
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
+  background: none;
   width: 9rem;
   font-size: 1rem;
   font-weight: 400;
@@ -354,7 +357,7 @@ canvas {
   transition: 0.3s ease-in-out;
 }
 
-.s1 .div-1 .inner-div-1 .intro #getintouch:hover, .s1 .div-1 .inner-div-1 .intro #getintouch:focus, .s1 .div-1 .inner-div-1 .intro #getintouch:active {
+.s1 .div-1 .inner-div-1 .intro #getintouch:hover {
   -webkit-transform: translateX(8px);
   transform: translateX(8px);
 }
