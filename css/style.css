@@ -574,6 +574,7 @@ canvas {
 .s2 .s2_div {
   width: 100%;
   height: 100%;
+  padding: 5% 0;
 }
 
 .s2 .s2_div .s2_div1 {
@@ -711,6 +712,7 @@ canvas {
           align-items: center;
   width: 100%;
   height: 100%;
+  font-weight: 600;
   color: #c5c6cc;
   border: 6px solid #212733;
   border-radius: 0.5rem;
@@ -719,11 +721,19 @@ canvas {
 }
 
 .s2 .s2_div .s2_div2 .highlight .highlights .h_box #highlight_1 {
-  background-color: #0b0c11;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(11, 12, 17, 0.7)), to(rgba(11, 12, 17, 0.7))), url("../../assets/Images/Portfolio_Website.png");
+  background-image: linear-gradient(rgba(11, 12, 17, 0.7), rgba(11, 12, 17, 0.7)), url("../../assets/Images/Portfolio_Website.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .s2 .s2_div .s2_div2 .highlight .highlights .h_box #highlight_2 {
-  background: #0b0c11;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(11, 12, 17, 0.7)), to(rgba(11, 12, 17, 0.7))), url("../../assets/Images/Coding.jpg");
+  background-image: linear-gradient(rgba(11, 12, 17, 0.7), rgba(11, 12, 17, 0.7)), url("../../assets/Images/Coding.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .s2 .s2_div .s2_div2 .highlight .highlights .h_box #highlight_3 {
@@ -735,7 +745,7 @@ canvas {
 }
 
 .s2 .s2_div .s2_div2 .highlight .highlights .h_box:hover {
-  -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.6);
+          box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.6);
 }
 /*# sourceMappingURL=style.css.map */
