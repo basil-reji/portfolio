@@ -101,6 +101,7 @@ canvas {
 
 .s1 .nav-bar {
   position: absolute;
+  max-height: 100vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -681,7 +682,6 @@ footer #copyright {
     width: 100%;
     height: 100vh;
     top: 0;
-    z-index: 5;
   }
   .s1 .nav-bar #logo {
     left: 2rem;
@@ -706,11 +706,11 @@ footer #copyright {
             align-items: center;
     padding: 0;
     margin: 0;
+    z-index: 5;
     -webkit-clip-path: circle(0px at 100% 0);
             clip-path: circle(0px at 100% 0);
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
-    z-index: 2;
   }
   .s1 .nav-bar .nav_links li {
     width: 20rem;
