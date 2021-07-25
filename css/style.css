@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap");
 @import url("https://use.typekit.net/jhd4pxp.css");
 html {
+  overflow: auto;
   overflow-x: hidden;
   font-size: 13px;
 }
@@ -25,113 +26,6 @@ html {
 body {
   background-color: #c5c6cc;
   font-family: "Open Sans", sans-serif;
-}
-
-@media screen and (max-width: 1024px) {
-  .s1 .nav-bar {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-  }
-  .s1 .nav-bar #logo {
-    left: 2rem;
-    top: 2rem;
-  }
-  .s1 .nav-bar .nav_links {
-    z-index: 1;
-    position: absolute;
-    background-color: #212733;
-    height: 100%;
-    width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 0;
-    margin: 0;
-    -webkit-clip-path: circle(0px at 100% 0);
-            clip-path: circle(0px at 100% 0);
-    -webkit-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-    z-index: 2;
-  }
-  .s1 .nav-bar .nav_links li {
-    width: 80%;
-    padding: 0.5rem;
-    margin: 0.1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .s1 .nav-bar .nav_links li .nav-active {
-    background: #68fbf1;
-    color: #212733;
-  }
-  .s1 .nav-bar .nav_links li a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-    background: #c5c6cc;
-    color: #212733;
-    font-size: 1.3rem;
-  }
-  .s1 .nav-bar .nav_links li button {
-    margin-top: 5rem;
-    font-size: 1.3rem;
-  }
-  .s1 .nav-bar .nav_links.open {
-    -webkit-clip-path: circle(2000px at 100% 0);
-            clip-path: circle(2000px at 100% 0);
-  }
-  .s1 .hamburger {
-    position: absolute;
-    cursor: pointer;
-    right: 2em;
-    top: 1em;
-    z-index: 5;
-  }
-  .s1 .hamburger .hamburger_line {
-    margin: 0.3em;
-    height: 0.3em;
-    width: 2em;
-    background-color: #c5c6cc;
-  }
-  .s1 .div-1 .inner-div-1 {
-    padding: 0;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    overflow: hidden;
-  }
-  .s1 .div-1 .inner-div-2 {
-    height: 40vh;
-  }
-  .s1 .div-1 .img-developer #svg-developer {
-    position: relative;
-    width: 95%;
-    height: auto;
-    max-height: 125%;
-    bottom: 0rem;
-  }
 }
 
 canvas {
@@ -664,7 +558,6 @@ canvas {
   background-color: rgba(71, 162, 153, 0.9);
   width: auto;
   padding: 2.5rem;
-  border: 5px solid #212733;
 }
 
 .s2 .s2_div .s2_div2 .highlight .highlights {
@@ -747,5 +640,114 @@ canvas {
 .s2 .s2_div .s2_div2 .highlight .highlights .h_box:hover {
   -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.6);
           box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 1024px) {
+  .s1 .nav-bar {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 5;
+  }
+  .s1 .nav-bar #logo {
+    left: 2rem;
+    top: 2rem;
+  }
+  .s1 .nav-bar .nav_links {
+    position: absolute;
+    background: rgba(33, 39, 51, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    height: 100%;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+    margin: 0;
+    -webkit-clip-path: circle(0px at 100% 0);
+            clip-path: circle(0px at 100% 0);
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    z-index: 2;
+  }
+  .s1 .nav-bar .nav_links li {
+    width: 20rem;
+    padding: 0.5rem;
+    margin: 0.1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .s1 .nav-bar .nav_links li .nav-active {
+    background: #68fbf1;
+    color: #212733;
+  }
+  .s1 .nav-bar .nav_links li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    background: #c5c6cc;
+    color: #212733;
+    font-size: 1.3rem;
+  }
+  .s1 .nav-bar .nav_links li button {
+    margin-top: 5rem;
+    font-size: 1.3rem;
+  }
+  .s1 .nav-bar .nav_links.open {
+    -webkit-clip-path: circle(2000px at 100% 0);
+            clip-path: circle(2000px at 100% 0);
+  }
+  .s1 .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 2em;
+    top: 1em;
+    z-index: 5;
+  }
+  .s1 .hamburger .hamburger_line {
+    margin: 0.3em;
+    height: 0.3em;
+    width: 2em;
+    background-color: #c5c6cc;
+  }
+  .s1 .div-1 .inner-div-1 {
+    padding: 0;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    overflow: hidden;
+  }
+  .s1 .div-1 .inner-div-2 {
+    height: 40vh;
+  }
+  .s1 .div-1 .img-developer #svg-developer {
+    position: relative;
+    width: 95%;
+    height: auto;
+    max-height: 125%;
+    bottom: 0rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

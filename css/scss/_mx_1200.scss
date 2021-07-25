@@ -1,18 +1,18 @@
-
 @media screen and (max-width:1024px) {
     .s1{
         .nav-bar{
             width: 100%;
             height: 100vh;
-            position: absolute;
+            top: 0;
+            z-index: 5;
             #logo{
                 left: 2rem;
-                top: 2rem;  
+                top: 2rem;
             }
             .nav_links{
-                z-index: 1;
                 position: absolute;
-                background-color: $color4;
+                background: rgba($color: $color4, $alpha: 0.5);
+                backdrop-filter: blur(10px);
                 height: 100%;
                 width: 100%;
                 flex-direction: column;
@@ -21,7 +21,7 @@
                 padding: 0;
                 margin: 0;          
                 li{
-                    width: 80%;
+                    width: 20rem;
                     padding: 0.5rem;
                     margin: 0.1rem;
                     display: flex;
