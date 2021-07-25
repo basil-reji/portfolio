@@ -652,6 +652,30 @@ canvas {
           box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.6);
 }
 
+footer {
+  background: #0b0c11;
+  padding: 2rem;
+}
+
+footer #made_by {
+  text-align: center;
+  width: 100%;
+  box-align: center;
+  color: #c5c6cc;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+  margin: auto;
+}
+
+footer #copyright {
+  text-align: center;
+  width: 100%;
+  color: rgba(197, 198, 204, 0.5);
+  font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  margin: auto;
+}
+
 @media screen and (max-width: 1024px) {
   .s1 .nav-bar {
     width: 100%;

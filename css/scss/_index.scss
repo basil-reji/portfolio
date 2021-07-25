@@ -320,4 +320,25 @@ canvas {
     }
 }
 
+footer{
+    background: $color5;
+    padding: 2rem;
+    #made_by{
+        text-align: center;
+        width: 100%;
+        box-align: center;
+        color: $color1;
+        font-family: $font2;
+        font-size: 0.8rem;
+        margin: auto;
+    }
+    #copyright{
+        text-align: center;
+        width: 100%;
+        color: rgba($color: $color1, $alpha: 0.5);
+        font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
+        font-size: 0.8rem;
+        margin: auto;
+    }
+}
 @import "./mx_1200";
