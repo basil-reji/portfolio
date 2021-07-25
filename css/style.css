@@ -96,7 +96,7 @@ canvas {
   height: 100vh;
   width: 100%;
   background: rgba(11, 12, 17, 0.8);
-  overflow: hidden;
+  position: relative;
 }
 
 .s1 .nav-bar {
@@ -449,9 +449,11 @@ canvas {
   width: 95%;
   height: auto;
   bottom: 0rem;
+  z-index: 2;
 }
 
 .s2 {
+  position: relative;
   background: #c5c6cc;
   width: 100%;
   display: -webkit-box;
@@ -468,7 +470,7 @@ canvas {
 .s2 .s2_div {
   width: 100%;
   height: 100%;
-  padding: 5% 0;
+  padding: 0 0;
 }
 
 .s2 .s2_div .s2_div1 {
@@ -607,7 +609,7 @@ canvas {
   height: 100%;
   font-weight: 600;
   color: #c5c6cc;
-  border: 6px solid #212733;
+  border: 1px solid #212733;
   border-radius: 0.5rem;
   padding: 0.5rem;
   text-align: center;
@@ -630,11 +632,19 @@ canvas {
 }
 
 .s2 .s2_div .s2_div2 .highlight .highlights .h_box #highlight_3 {
-  background: #0b0c11;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(11, 12, 17, 0.7)), to(rgba(11, 12, 17, 0.7))), url("../../assets/Images/Covid-19_awareness.PNG");
+  background-image: linear-gradient(rgba(11, 12, 17, 0.7), rgba(11, 12, 17, 0.7)), url("../../assets/Images/Covid-19_awareness.PNG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .s2 .s2_div .s2_div2 .highlight .highlights .h_box #highlight_4 {
-  background: #0b0c11;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(11, 12, 17, 0.7)), to(rgba(11, 12, 17, 0.7))), url("../../assets/Images/Photography.PNG");
+  background-image: linear-gradient(rgba(11, 12, 17, 0.7), rgba(11, 12, 17, 0.7)), url("../../assets/Images/Photography.PNG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .s2 .s2_div .s2_div2 .highlight .highlights .h_box:hover {
