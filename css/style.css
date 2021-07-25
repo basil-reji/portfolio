@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap");
+@import url("https://use.typekit.net/jhd4pxp.css");
 html {
+  overflow: auto;
   overflow-x: hidden;
   font-size: 13px;
 }
@@ -69,11 +71,24 @@ canvas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
 }
 
 .social_media .sm .sm-btn:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
   color: #68fbf1;
 }
 
@@ -81,7 +96,7 @@ canvas {
   height: 100vh;
   width: 100%;
   background: rgba(11, 12, 17, 0.8);
-  overflow: hidden;
+  position: relative;
 }
 
 .s1 .nav-bar {
@@ -434,22 +449,249 @@ canvas {
   width: 95%;
   height: auto;
   bottom: 0rem;
+  z-index: 2;
+}
+
+.s2 {
+  position: relative;
+  background: #c5c6cc;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.s2 .s2_div {
+  width: 100%;
+  height: 100%;
+  padding: 0 0;
+}
+
+.s2 .s2_div .s2_div1 {
+  padding: 15% 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.s2 .s2_div .s2_div1 .quote_box {
+  /* Grow */
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  min-height: 13rem;
+  width: 80%;
+  background-color: #0b0c11;
+  color: #c5c6cc;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.s2 .s2_div .s2_div1 .quote_box:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.s2 .s2_div .s2_div1 .quote_box .quote_area .quote_head {
+  color: #68fbf1;
+  font-size: 2.5rem;
+}
+
+.s2 .s2_div .s2_div1 .quote_box .quote_area #quote {
+  font-weight: 600;
+  margin: 0.2rem 1rem;
+  font-size: 1.3rem;
+  margin: 0 1.5rem;
+}
+
+.s2 .s2_div .s2_div1 .quote_box .quote_area #quote_by {
+  font-family: 'Courier New', Courier, monospace;
+  color: #68fbf1;
+  text-align: right;
+  margin: 1rem 1.5rem;
+}
+
+.s2 .s2_div .s2_div1 .quote_box:hover {
+  -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.5);
+}
+
+.s2 .s2_div .s2_div2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.s2 .s2_div .s2_div2 .highlight {
+  height: auto;
+  background-color: rgba(71, 162, 153, 0.9);
+  width: auto;
+  padding: 2.5rem;
+}
+
+.s2 .s2_div .s2_div2 .highlight .highlights {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.s2 .s2_div .s2_div2 .highlight .highlights .h_box {
+  cursor: pointer;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.s2 .s2_div .s2_div2 .highlight .highlights .h_box .highlight_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  color: #c5c6cc;
+  border: 1px solid #212733;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.s2 .s2_div .s2_div2 .highlight .highlights .h_box #highlight_1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(11, 12, 17, 0.7)), to(rgba(11, 12, 17, 0.7))), url("../../assets/Images/Portfolio_Website.png");
+  background-image: linear-gradient(rgba(11, 12, 17, 0.7), rgba(11, 12, 17, 0.7)), url("../../assets/Images/Portfolio_Website.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.s2 .s2_div .s2_div2 .highlight .highlights .h_box #highlight_2 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(11, 12, 17, 0.7)), to(rgba(11, 12, 17, 0.7))), url("../../assets/Images/Coding.jpg");
+  background-image: linear-gradient(rgba(11, 12, 17, 0.7), rgba(11, 12, 17, 0.7)), url("../../assets/Images/Coding.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.s2 .s2_div .s2_div2 .highlight .highlights .h_box #highlight_3 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(11, 12, 17, 0.7)), to(rgba(11, 12, 17, 0.7))), url("../../assets/Images/Covid-19_awareness.PNG");
+  background-image: linear-gradient(rgba(11, 12, 17, 0.7), rgba(11, 12, 17, 0.7)), url("../../assets/Images/Covid-19_awareness.PNG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.s2 .s2_div .s2_div2 .highlight .highlights .h_box #highlight_4 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(11, 12, 17, 0.7)), to(rgba(11, 12, 17, 0.7))), url("../../assets/Images/Photography.PNG");
+  background-image: linear-gradient(rgba(11, 12, 17, 0.7), rgba(11, 12, 17, 0.7)), url("../../assets/Images/Photography.PNG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.s2 .s2_div .s2_div2 .highlight .highlights .h_box:hover {
+  -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.6);
+          box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.6);
+}
+
+footer {
+  background: #0b0c11;
+  padding: 2rem;
+}
+
+footer #made_by {
+  text-align: center;
+  width: 100%;
+  box-align: center;
+  color: #c5c6cc;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+  margin: auto;
+}
+
+footer #copyright {
+  text-align: center;
+  width: 100%;
+  color: rgba(197, 198, 204, 0.5);
+  font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  margin: auto;
 }
 
 @media screen and (max-width: 1024px) {
   .s1 .nav-bar {
     width: 100%;
     height: 100vh;
-    position: absolute;
+    top: 0;
+    z-index: 5;
   }
   .s1 .nav-bar #logo {
     left: 2rem;
     top: 2rem;
   }
   .s1 .nav-bar .nav_links {
-    z-index: 1;
     position: absolute;
-    background-color: #212733;
+    background: rgba(33, 39, 51, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     height: 100%;
     width: 100%;
     -webkit-box-orient: vertical;
@@ -471,7 +713,7 @@ canvas {
     z-index: 2;
   }
   .s1 .nav-bar .nav_links li {
-    width: 80%;
+    width: 20rem;
     padding: 0.5rem;
     margin: 0.1rem;
     display: -webkit-box;
