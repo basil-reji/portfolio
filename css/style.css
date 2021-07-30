@@ -709,8 +709,8 @@ footer #copyright {
     z-index: 5;
     -webkit-clip-path: circle(0px at 100% 0);
             clip-path: circle(0px at 100% 0);
-    -webkit-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
   }
   .s1 .nav-bar .nav_links li {
     width: 20rem;
@@ -765,6 +765,21 @@ footer #copyright {
     height: 0.3em;
     width: 2em;
     background-color: #c5c6cc;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .s1 .hamburger.open .hamburger_line:nth-child(1) {
+    background-color: transparent;
+  }
+  .s1 .hamburger.open .hamburger_line:nth-child(2) {
+    height: 0.2em;
+    -webkit-transform: translateY(0.5em) rotate(45deg);
+            transform: translateY(0.5em) rotate(45deg);
+  }
+  .s1 .hamburger.open .hamburger_line:nth-child(3) {
+    height: 0.2em;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
   .s1 .div-1 .inner-div-1 {
     padding: 0;
@@ -783,5 +798,24 @@ footer #copyright {
     max-height: 125%;
     bottom: 0rem;
   }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 /*# sourceMappingURL=style.css.map */
