@@ -12,8 +12,6 @@ html{
   }
 }
 
-
-
 @import "./scss/theme";
 
 // fonts used   - $font1 $font2
@@ -27,6 +25,26 @@ html{
 body{
   background-color: $color1;
   font-family: $font2;
+  
 }
 
-@import "./scss/index"
+@import "./scss/index";
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} 

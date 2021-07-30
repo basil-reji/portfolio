@@ -46,7 +46,7 @@
                     }
                 }
                 clip-path: circle(0px at 100% 0);
-                transition: all 1s ease-in-out;
+                transition: all 0.8s ease-in-out;
             }
             .nav_links.open{
                 clip-path: circle(2000px at 100% 0);
@@ -64,6 +64,20 @@
                 height: 0.3em;
                 width: 2em;
                 background-color: $color1;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+        .hamburger.open{
+            .hamburger_line:nth-child(1){
+                background-color: transparent;
+            }
+            .hamburger_line:nth-child(2){
+                height: 0.2em;
+                transform: translateY(0.5em) rotate(45deg);
+            }
+            .hamburger_line:nth-child(3){
+                height: 0.2em;
+                transform: rotate(-45deg);
             }
         }
         .div-1{
