@@ -3,6 +3,7 @@
 html {
   overflow: auto;
   overflow-x: hidden;
+  overflow-y: hidden;
   font-size: 13px;
 }
 
@@ -21,11 +22,104 @@ html {
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   background-color: #c5c6cc;
   font-family: "Open Sans", sans-serif;
+}
+
+.preloader {
+  display: block;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: radial-gradient(#212733, #0b0c11);
+  z-index: 10;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.preloader .loader {
+  position: absolute;
+  height: 11rem;
+  width: 11rem;
+  border-radius: 50%;
+}
+
+.preloader .loader #preloader_logo {
+  fill: transparent;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  stroke: #fff;
+  stroke-width: 0.7rem;
+  height: 5rem;
+  width: auto;
+  -webkit-animation: fill 1s ease-in-out forwards 4s infinite alternate;
+          animation: fill 1s ease-in-out forwards 4s infinite alternate;
+}
+
+.preloader .loader #preloader_logo path:nth-child(1) {
+  stroke-dasharray: 2171.9169921875;
+  stroke-dashoffset: 2171.9169921875;
+  -webkit-animation: stroke-anim 4s ease forwards;
+          animation: stroke-anim 4s ease forwards;
+}
+
+.preloader .loader #preloader_logo path:nth-child(2) {
+  stroke-dasharray: 2351.698486328125;
+  stroke-dashoffset: 2351.698486328125;
+  -webkit-animation: stroke-anim 4s ease forwards;
+          animation: stroke-anim 4s ease forwards;
+}
+
+@-webkit-keyframes stroke-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes stroke-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes fill {
+  from {
+    fill: transparent;
+    stroke-width: 0.7rem;
+  }
+  to {
+    stroke-width: 0rem;
+    fill: #fff;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+    stroke-width: 0.7rem;
+  }
+  to {
+    stroke-width: 0rem;
+    fill: #fff;
+  }
 }
 
 canvas {
