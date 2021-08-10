@@ -3,317 +3,447 @@
 
 // font-family: 'Otomanopee One', sans-serif;
 // Colors used  - $color1 $color2 $color3 $color4 $color5
+#home{
+    @import "./preloader";
+    canvas {
+        background-color: #000;
+        background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),transparent),
+        radial-gradient(circle at 20% 80%, $color4, transparent);
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+    }
+    
+    .social_media{
+        z-index: 2;
+        max-width: 5rem;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .sm{
+            .sm-btn{
+                height: 3rem;
+                width: 4rem;
+                cursor: pointer;
+                background: none;
+                border: none;
+                font-size: 2rem;
+                color: $color1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-canvas {
-    background-color: #000;
-    background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),transparent),
-    radial-gradient(circle at 20% 80%, $color4, transparent);
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
-}
-  
-.social_media{
-    z-index: 2;
-    max-width: 5rem;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .sm{
-        .sm-btn{
-            height: 3rem;
-            width: 4rem;
-            cursor: pointer;
-            background: none;
-            border: none;
-            font-size: 2rem;
-            color: $color1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+                @include hacks();
+                @include prefixed(transition-duration, $slowDuration);
+                @include prefixed(transition-property, transform);
 
-            @include hacks();
-            @include prefixed(transition-duration, $slowDuration);
-            @include prefixed(transition-property, transform);
-
-            &:hover{
-                @include prefixed(transform, scale(1.1));
-                color: $color2;
+                &:hover{
+                    @include prefixed(transform, scale(1.1));
+                    color: $color2;
+                }
             }
         }
     }
-}
 
-.s1{
-    height: 100vh;
-    width: 100%;
-    background: rgba($color: $color5, $alpha: 0.8) ;
-    .nav-bar{
-        position: absolute;
-        max-height: 100vh;
+    .s1{
+        height: 100vh;
+        width: 100%;
+        background: rgba($color: $color5, $alpha: 0.8) ;
+        .nav-bar{
+            position: absolute;
+            max-height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: $font1;
+            font-weight: 500;
+            font-size: 0.9rem;
+            #logo{
+                position: absolute;
+                left: 1.5rem;
+                top: 1rem;
+                color: #fff;
+                font-weight: 600;
+                font-size: 1rem;
+                z-index: 1;
+                #br_logo{
+                    width: 2.7rem;
+                    height: auto;
+                }
+            }
+            .nav_links{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                li{
+                    list-style: none;
+                    text-decoration: none;
+                    padding: 0.5rem 1.5rem;
+                    .nav-active{
+                        color: $color2;
+                    }
+                    a{
+                        @import "./effects/border-transitions/underline-from-center";
+                        @include underline-from-center();
+                        padding:1rem 0.5rem;
+                        cursor: pointer;
+                        text-decoration: none;
+                        font-weight: 600;
+                        color: $color1;
+                    }
+                    button{
+                        @import "./effects/background-transitions/shutter-out-horizontal";
+                        @include shutter-out-horizontal();
+                        display: inline-block;
+                        cursor: pointer;
+                        background:none;
+                        border: 0.2rem solid $color1;
+                        padding: 0.3rem 0.6rem;
+
+                        color: $color1;
+                        font-family: $font1;
+                        font-size: 0.9rem;
+                        font-weight: 600;
+                        transition: 0.3s ease-in-out;
+                    }
+                    /* Animation */
+                    a:hover{
+                        color: $color2;
+                    }
+                    button:hover{
+                        border-color: $color2;
+                    }
+                }
+            }
+        }
+        .div-1{
+            height: 100%;
+            width: 100%;
+            .inner-div-1{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10% 0;
+                .intro{
+                    color: $color1;
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    .iam{
+                        display: inline-block;
+                        cursor: pointer;
+                        font-family: 'Otomanopee One', sans-serif;
+                        font-weight: 600;
+                        font-size: 3rem;
+                        color: $color2;
+                        .iam-content{
+                            @import "./effects/2d-transitions/wobble-skew";
+                            @include wobble-skew();
+                            color: $color2;
+                            transition: 0.3s ease-in-out;
+                        }
+                    }
+                    .desig{
+                        font-size: 1rem;
+                        font-weight: 400;
+                    }
+                    #getintouch{
+                        @import "./effects/2d-transitions/forward";
+                        @include forward();
+                        background:none;
+                        width: 9rem;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        padding: 0.5rem;
+                        color: $color2;
+                        border: 2px solid;
+                        border-radius: 0.3em;
+                        transition: 0.3s ease-in-out;
+                    }
+                    #getintouch:hover{
+                        color: $color4;
+                        background-color: $color2;
+                    }
+                }
+                overflow: hidden;
+            }
+            .inner-div-2{
+                display: flex;
+                .img-developer{
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    width: 95%;
+                    height: auto;
+                    padding-inline: 5%;
+                    #svg-developer{
+                        position: relative;
+                        width: 95%;
+                        height: auto;
+                        bottom: 0rem;
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+        position: relative;
+    }
+
+    .s2{
+        position: relative;
+        background: $color1;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: $font1;
-        font-weight: 500;
-        font-size: 0.9rem;
-        #logo{
-            position: absolute;
-            left: 1.5rem;
-            top: 1rem;
-            color: #fff;
-            font-weight: 600;
-            font-size: 1rem;
-            z-index: 1;
-            #br_logo{
-                width: 2.7rem;
-                height: auto;
-            }
-        }
-        .nav_links{
+        .s2_div{
             width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            li{
-                list-style: none;
-                text-decoration: none;
-                padding: 0.5rem 1.5rem;
-                .nav-active{
-                    color: $color2;
-                }
-                a{
-                    @import "./effects/border-transitions/underline-from-center";
-                    @include underline-from-center();
-                    padding:1rem 0.5rem;
-                    cursor: pointer;
-                    text-decoration: none;
-                    font-weight: 600;
-                    color: $color1;
-                }
-                button{
-                    @import "./effects/background-transitions/shutter-out-horizontal";
-                    @include shutter-out-horizontal();
-                    display: inline-block;
-                    cursor: pointer;
-                    background:none;
-                    border: 0.2rem solid $color1;
-                    padding: 0.3rem 0.6rem;
-
-                    color: $color1;
-                    font-family: $font1;
-                    font-size: 0.9rem;
-                    font-weight: 600;
-                    transition: 0.3s ease-in-out;
-                }
-                /* Animation */
-                a:hover{
-                    color: $color2;
-                }
-                button:hover{
-                    border-color: $color2;
-                }
-            }
-        }
-    }
-    .div-1{
-        height: 100%;
-        width: 100%;
-        .inner-div-1{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10% 0;
-            .intro{
-                color: $color1;
-                font-size: 2.5rem;
-                font-weight: 700;
-                .iam{
-                    display: inline-block;
-                    cursor: pointer;
-                    font-family: 'Otomanopee One', sans-serif;
-                    font-weight: 600;
-                    font-size: 3rem;
-                    color: $color2;
-                    .iam-content{
-                        @import "./effects/2d-transitions/wobble-skew";
-                        @include wobble-skew();
-                        color: $color2;
-                        transition: 0.3s ease-in-out;
-                    }
-                }
-                .desig{
-                    font-size: 1rem;
-                    font-weight: 400;
-                }
-                #getintouch{
-                    @import "./effects/2d-transitions/forward";
-                    @include forward();
-                    background:none;
-                    width: 9rem;
-                    font-size: 1rem;
-                    font-weight: 400;
-                    cursor: pointer;
-                    display: flex;
-                    justify-content: center;
-                    padding: 0.5rem;
-                    color: $color2;
-                    border: 2px solid;
-                    border-radius: 0.3em;
-                    transition: 0.3s ease-in-out;
-                }
-                #getintouch:hover{
-                    color: $color4;
-                    background-color: $color2;
-                }
-            }
-            overflow: hidden;
-        }
-        .inner-div-2{
-            display: flex;
-            .img-developer{
-                display: flex;
-                align-items: flex-end;
-                justify-content: center;
-                width: 95%;
-                height: auto;
-                padding-inline: 5%;
-                #svg-developer{
-                    position: relative;
-                    width: 95%;
-                    height: auto;
-                    bottom: 0rem;
-                    z-index: 2;
-                }
-            }
-        }
-    }
-    position: relative;
-}
-
-.s2{
-    position: relative;
-    background: $color1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .s2_div{
-        width: 100%;
-        height: 100%;
-        padding: 0 0;
-        .s2_div1{
-            padding: 15% 0;
             height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .quote_box{
-                @import "./effects/2d-transitions/grow";
-                @include grow();
-                min-height: 13rem;
-                width: 80%;
-                background-color: $color5;
-                color: $color1;
-                border-radius: 0.5rem;
-                padding: 1rem 1.5rem;
-                box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.3);
-                .quote_area{
-                    .quote_head{
-                        color: $color2;
-                        font-size: 2.5rem;
+            padding: 0 0;
+            .s2_div1{
+                padding: 15% 0;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .quote_box{
+                    @import "./effects/2d-transitions/grow";
+                    @include grow();
+                    min-height: 13rem;
+                    width: 80%;
+                    background-color: $color5;
+                    color: $color1;
+                    border-radius: 0.5rem;
+                    padding: 1rem 1.5rem;
+                    box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.3);
+                    .quote_area{
+                        .quote_head{
+                            color: $color2;
+                            font-size: 2.5rem;
+                        }
+                        #quote{
+                            font-weight: 600;
+                            margin: 0.2rem 1rem;
+                            font-size: 1.3rem;
+                            margin: 0 1.5rem;
+                        }
+                        #quote_by{
+                            font-family: 'Courier New', Courier, monospace;
+                            color: $color2;
+                            text-align: right;
+                            margin: 1rem 1.5rem;
+                        }
                     }
-                    #quote{
-                        font-weight: 600;
-                        margin: 0.2rem 1rem;
-                        font-size: 1.3rem;
-                        margin: 0 1.5rem;
-                    }
-                    #quote_by{
-                        font-family: 'Courier New', Courier, monospace;
-                        color: $color2;
-                        text-align: right;
-                        margin: 1rem 1.5rem;
-                    }
-                }
-                transition: 0.5s ease-in-out;
+                    transition: 0.5s ease-in-out;
 
-                &:hover{
-                    box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.5);
+                    &:hover{
+                        box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.5);
+                    }
                 }
             }
-        }
-        .s2_div2{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .highlight{
-                height: auto;
-                background-color: rgba($color: $color3, $alpha: 0.9);
-                width: auto;
-                padding: 2.5rem;
-                .highlights{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    .h_box{
-                        cursor: pointer;
-                        margin: 1rem;
+            .s2_div2{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .highlight{
+                    height: auto;
+                    background-color: rgba($color: $color3, $alpha: 0.9);
+                    width: auto;
+                    padding: 2.5rem;
+                    .highlights{
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        width: 10rem;
-                        height: 10rem;
-                        border-radius: 0.5rem;
-                        .highlight_box{
+                        .h_box{
+                            cursor: pointer;
+                            margin: 1rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 10rem;
+                            height: 10rem;
+                            border-radius: 0.5rem;
+                            .highlight_box{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                height: 100%;
+                                font-weight: 600;
+                                color: $color1;
+                                border: 1px solid $color4;
+                                border-radius: 0.5rem;
+
+                                padding: 0.5rem;
+                                text-align: center;
+                            }
+                            #highlight_1{
+                                background-image: linear-gradient(rgba($color: $color5, $alpha: 0.7),rgba($color: $color5, $alpha: 0.7)), url("../../assets/Images/Portfolio_Website.png") ;
+                                background-position: center; 
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                            }
+                            #highlight_2{
+                                background-image: linear-gradient(rgba($color: $color5, $alpha: 0.7),rgba($color: $color5, $alpha: 0.7)), url("../../assets/Images/Coding.jpg");
+                                background-position: center; 
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                            }
+                            #highlight_3{
+                                background-image: linear-gradient(rgba($color: $color5, $alpha: 0.7),rgba($color: $color5, $alpha: 0.7)), url("../../assets/Images/Covid-19_awareness.PNG");
+                                background-position: center; 
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                            }
+                            #highlight_4{
+                                background-image: linear-gradient(rgba($color: $color5, $alpha: 0.7),rgba($color: $color5, $alpha: 0.7)), url("../../assets/Images/Photography.PNG");
+                                background-position: center; 
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                            }
+
+                            box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.3);
+                            transition: 0.5s ease-in-out;
+                            &:hover{
+                                box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.6);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer{
+        background: $color5;
+        padding: 2rem;
+        #made_by{
+            text-align: center;
+            width: 100%;
+            box-align: center;
+            color: $color1;
+            font-family: $font2;
+            font-size: 0.8rem;
+            margin: auto;
+        }
+        #copyright{
+            text-align: center;
+            width: 100%;
+            color: rgba($color: $color1, $alpha: 0.5);
+            font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
+            font-size: 0.8rem;
+            margin: auto;
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    #home{
+        .s1{
+            .nav-bar{
+                width: 100%;
+                height: 100vh;
+                top: 0;
+                #logo{
+                    left: 2rem;
+                    top: 2rem;
+                }
+                .nav_links{
+                    position: absolute;
+                    background: rgba($color: $color4, $alpha: 0.5);
+                    backdrop-filter: blur(10px);
+                    height: 100%;
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;  
+                    padding: 0;
+                    margin: 0;
+                    z-index: 5;      
+                    li{
+                        width: 20rem;
+                        padding: 0.5rem;
+                        margin: 0.1rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .nav-active{
+                            background: $color2;
+                            color: $color4;
+                        }
+                        a{
                             display: flex;
                             justify-content: center;
                             align-items: center;
                             width: 100%;
-                            height: 100%;
-                            font-weight: 600;
-                            color: $color1;
-                            border: 1px solid $color4;
-                            border-radius: 0.5rem;
-
-                            padding: 0.5rem;
-                            text-align: center;
+                            background: $color1;
+                            color: $color4;
+                            font-size: 1.3rem;
                         }
-                        #highlight_1{
-                            background-image: linear-gradient(rgba($color: $color5, $alpha: 0.7),rgba($color: $color5, $alpha: 0.7)), url("../../assets/Images/Portfolio_Website.png") ;
-                            background-position: center; 
-                            background-repeat: no-repeat;
-                            background-size: cover;
+                        button{
+                            margin-top: 5rem;
+                            font-size: 1.3rem;
                         }
-                        #highlight_2{
-                            background-image: linear-gradient(rgba($color: $color5, $alpha: 0.7),rgba($color: $color5, $alpha: 0.7)), url("../../assets/Images/Coding.jpg");
-                            background-position: center; 
-                            background-repeat: no-repeat;
-                            background-size: cover;
-                        }
-                        #highlight_3{
-                            background-image: linear-gradient(rgba($color: $color5, $alpha: 0.7),rgba($color: $color5, $alpha: 0.7)), url("../../assets/Images/Covid-19_awareness.PNG");
-                            background-position: center; 
-                            background-repeat: no-repeat;
-                            background-size: cover;
-                        }
-                        #highlight_4{
-                            background-image: linear-gradient(rgba($color: $color5, $alpha: 0.7),rgba($color: $color5, $alpha: 0.7)), url("../../assets/Images/Photography.PNG");
-                            background-position: center; 
-                            background-repeat: no-repeat;
-                            background-size: cover;
-                        }
-
-                        box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.3);
-                        transition: 0.5s ease-in-out;
-                        &:hover{
-                            box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.6);
-                        }
+                    }
+                    clip-path: circle(0px at 100% 0);
+                    transition: all 0.8s ease-in-out;
+                }
+                .nav_links.open{
+                    clip-path: circle(2000px at 100% 0);
+                }
+            }
+            .hamburger
+            {
+                position: absolute;
+                cursor: pointer;
+                right: 2em;
+                top: 1em;
+                z-index: 5;
+                .hamburger_line{
+                    margin: 0.3em;
+                    height: 0.3em;
+                    width: 2em;
+                    background-color: $color1;
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+            .hamburger.open{
+                .hamburger_line:nth-child(1){
+                    background-color: transparent;
+                }
+                .hamburger_line:nth-child(2){
+                    height: 0.2em;
+                    transform: translateY(0.5em) rotate(45deg);
+                }
+                .hamburger_line:nth-child(3){
+                    height: 0.2em;
+                    transform: rotate(-45deg);
+                }
+            }
+            .div-1{
+                .inner-div-1{
+                    padding: 0;
+                    align-items: flex-end;
+                    overflow: hidden;
+                }
+                .inner-div-2{
+                    height: 40vh;
+                }
+                .img-developer{
+                    #svg-developer{
+                        position: relative;
+                        width: 95%;
+                        height: auto;
+                        max-height: 125%;
+                        bottom: 0rem;
                     }
                 }
             }
@@ -321,25 +451,3 @@ canvas {
     }
 }
 
-footer{
-    background: $color5;
-    padding: 2rem;
-    #made_by{
-        text-align: center;
-        width: 100%;
-        box-align: center;
-        color: $color1;
-        font-family: $font2;
-        font-size: 0.8rem;
-        margin: auto;
-    }
-    #copyright{
-        text-align: center;
-        width: 100%;
-        color: rgba($color: $color1, $alpha: 0.5);
-        font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
-        font-size: 0.8rem;
-        margin: auto;
-    }
-}
-@import "./mx_1024";
