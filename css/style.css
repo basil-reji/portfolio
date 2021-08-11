@@ -532,7 +532,7 @@ body {
   }
 }
 
-#home .s1 .div-1 .inner-div-1 .intro .iam .iam-content:hover, #home .s1 .div-1 .inner-div-1 .intro .iam .iam-content:focus, #home .s1 .div-1 .inner-div-1 .intro .iam .iam-content:active {
+#home .s1 .div-1 .inner-div-1 .intro .iam .iam-content:hover {
   -webkit-animation-name: hvr-wobble-skew;
   animation-name: hvr-wobble-skew;
   -webkit-animation-duration: 1s;
