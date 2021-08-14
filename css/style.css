@@ -286,6 +286,7 @@ body {
 }
 
 #home .s1 .nav-bar #logo {
+  cursor: pointer;
   position: absolute;
   left: 1.5rem;
   top: 1rem;
@@ -993,6 +994,7 @@ body {
 }
 
 #about .s1 .nav-bar #logo {
+  cursor: pointer;
   position: absolute;
   left: 1.5rem;
   top: 1rem;
@@ -1251,6 +1253,7 @@ body {
 }
 
 #blog .s1 .nav-bar {
+  z-index: 4;
   position: absolute;
   max-height: 100vh;
   width: 100%;
@@ -1269,6 +1272,7 @@ body {
 }
 
 #blog .s1 .nav-bar #logo {
+  cursor: pointer;
   position: absolute;
   left: 1.5rem;
   top: 1rem;
@@ -1414,6 +1418,34 @@ body {
   border-color: #68fbf1;
 }
 
+#blog .s1 .div-1 {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(-45deg, #212733, #0b0c11);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+}
+
+#blog .s1 .div-1 .in-div-1 {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#blog .s1 .div-1 .in-div-1 .coming-soon {
+  position: relative;
+  height: auto;
+  text-align: center;
+  color: #c5c6cc;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 @media screen and (max-width: 1024px) {
   #blog .s1 .nav-bar {
     width: 100%;
@@ -1517,6 +1549,30 @@ body {
     height: 0.2em;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
+  }
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
