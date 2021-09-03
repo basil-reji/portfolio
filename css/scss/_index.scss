@@ -177,6 +177,7 @@
                 overflow: hidden;
             }
             .inner-div-2{
+                pointer-events: none;
                 display: flex;
                 .img-developer{
                     display: flex;
