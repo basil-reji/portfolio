@@ -1,0 +1,69 @@
+.nav-bar{
+    position: absolute;
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font1;
+    font-weight: 500;
+    font-size: 0.9rem;
+    #logo{
+        position: absolute;
+        left: 1.5rem;
+        top: 1rem;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1rem;
+        z-index: 1;
+        #br_logo{
+            width: 2.7rem;
+            height: auto;
+        }
+    }
+    .nav_links{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        li{
+            list-style: none;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            .nav-active{
+                color: $color2;
+            }
+            a{
+                @import "./effects/border-transitions/underline-from-center";
+                @include underline-from-center();
+                padding:1rem 0.5rem;
+                cursor: pointer;
+                text-decoration: none;
+                font-weight: 600;
+                color: $color1;
+            }
+            button{
+                @import "./effects/background-transitions/shutter-out-horizontal";
+                @include shutter-out-horizontal();
+                display: inline-block;
+                cursor: pointer;
+                background:none;
+                border: 0.2rem solid $color1;
+                padding: 0.3rem 0.6rem;
+
+                color: $color1;
+                font-family: $font1;
+                font-size: 0.9rem;
+                font-weight: 600;
+                transition: 0.3s ease-in-out;
+            }
+            /* Animation */
+            a:hover{
+                color: $color2;
+            }
+            button:hover{
+                border-color: $color2;
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+html{
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-size: 13px;
+      
+  @media screen and (min-width: 900px) {
+    font-size: 16px;
+  }
+      
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
+}
+
+@import "./scss/theme";
+
+// fonts used   - $font1 $font2
+// Colors used  - $color1 $color2 $color3 $color4 $color5
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: $color1;
+  font-family: $font2;
+}
+
+@import "./scss/preloader";
+@import "./scss/index";
+@import "./scss/about";
+@import "./scss/blog";
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} 
