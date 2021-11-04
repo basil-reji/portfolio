@@ -206,7 +206,7 @@ body {
   transition-duration: 0.3s;
   display: inline-block;
   cursor: pointer;
-  background: none;
+  background: transparent;
   border: 0.2rem solid #c5c6cc;
   padding: 0.3rem 0.6rem;
   color: #c5c6cc;
@@ -974,13 +974,19 @@ body {
     background: #c5c6cc;
     color: #212733;
     font-size: 1.3rem;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   #nav-bar .nav_links li button {
-    margin-top: 5rem;
+    width: 20rem;
+    padding: 0.5rem 0.6rem;
+    margin: 2.5rem 0rem;
     font-size: 1.3rem;
   }
   #nav-bar .nav_links li a:hover {
-    color: #000;
+    color: #0b0c11;
+    background-color: #68fbf1;
+    width: 100%;
   }
   #nav-bar .nav_links.open {
     -webkit-clip-path: circle(2000px at 100% 0);

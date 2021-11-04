@@ -52,7 +52,7 @@
                 @include shutter-out-horizontal();
                 display: inline-block;
                 cursor: pointer;
-                background:none;
+                background: transparent;
                 border: 0.2rem solid $color1;
                 padding: 0.3rem 0.6rem;
 
@@ -416,13 +416,18 @@
                     background: $color1;
                     color: $color4;
                     font-size: 1.3rem;
+                    transition: all 0.3s ease;
                 }
                 button{
-                    margin-top: 5rem;
+                    width: 20rem;
+                    padding: 0.5rem 0.6rem;
+                    margin: 2.5rem 0rem;
                     font-size: 1.3rem;
                 }
                 a:hover{
-                    color: #000;
+                    color: $color5;
+                    background-color: $color2;
+                    width: 100%;
                 }
             }
             clip-path: circle(0px at 100% 0);
