@@ -41,8 +41,6 @@
                 color: $color2;
             }
             a{
-                @import "./effects/border-transitions/underline-from-center";
-                @include underline-from-center();
                 padding:1rem 0.5rem;
                 cursor: pointer;
                 text-decoration: none;
@@ -349,9 +347,37 @@
     }
 }
 
+@media screen and (min-width:1024px) {
+    #nav-bar{
+        .nav_links{
+            li{
+                .nav-active{
+                    color: $color2;
+                }
+                a{
+                    @import "./effects/border-transitions/underline-from-center";
+                    @include underline-from-center();
+                }
+                button{
+                    @import "./effects/background-transitions/shutter-out-horizontal";
+                    @include shutter-out-horizontal();
+                }
+                a:hover{
+                    color: $color2;
+                }
+                button:hover{
+                    border-color: $color2;
+                }
+            }
+        }
+    }
+
+}
+
 @media screen and (max-width:1024px) {
 
     #nav-bar{
+        pointer-events: none;
         width: 100%;
         height: 100vh;
         top: 0;
@@ -395,6 +421,9 @@
                     margin-top: 5rem;
                     font-size: 1.3rem;
                 }
+                a:hover{
+                    color: #000;
+                }
             }
             clip-path: circle(0px at 100% 0);
             transition: all 0.8s ease-in-out;
@@ -405,6 +434,7 @@
     }
     .hamburger
     {
+        pointer-events: all;
         position: absolute;
         cursor: pointer;
         right: 2em;
