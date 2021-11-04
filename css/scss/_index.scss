@@ -361,6 +361,7 @@
                 button{
                     @import "./effects/background-transitions/shutter-out-horizontal";
                     @include shutter-out-horizontal();
+                    background: transparent;
                 }
                 a:hover{
                     color: $color2;

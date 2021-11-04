@@ -867,6 +867,7 @@ body {
     transition-property: color;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    background: transparent;
   }
   #nav-bar .nav_links li button:before {
     content: "";
