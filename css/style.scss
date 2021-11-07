@@ -1,7 +1,7 @@
 html{
   overflow: auto;
   overflow-x: hidden;
-  overflow-y: hidden;
+  //overflow-y: hidden;
   font-size: 13px;
       
   @media screen and (min-width: 900px) {
@@ -29,7 +29,8 @@ body{
   font-family: $font2;
 }
 
-@import "./scss/preloader";
+//@import "./scss/preloader";
+@import "./scss/main";
 @import "./scss/index";
 @import "./scss/about";
 @import "./scss/blog";
