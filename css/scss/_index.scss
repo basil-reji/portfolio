@@ -63,14 +63,15 @@
                 padding: 10% 0;
                 .intro{
                     color: $color1;
-                    font-size: 2.5rem;
+                    font-size: 3rem;
                     font-weight: 700;
                     .iam{
                         display: inline-block;
                         cursor: pointer;
                         font-family: 'Otomanopee One', sans-serif;
+                        line-height: 0rem;
                         font-weight: 600;
-                        font-size: 3rem;
+                        font-size: 4rem;
                         color: $color2;
                         .iam-content{
                             @import "./effects/2d-transitions/wobble-skew";
@@ -80,12 +81,17 @@
                         }                       
                     }
                     .desig{
+                        font-family: $font3;
                         font-size: 1rem;
-                        font-weight: 400;
+                        font-weight: 500;
+                        letter-spacing: 0.85rem;
+                        line-height: 2.5rem;
+                        padding-bottom: 1rem;
                     }
                     #getintouch{
                         @import "./effects/2d-transitions/forward";
                         @include forward();
+
                         background:none;
                         width: 9rem;
                         font-size: 1rem;
@@ -98,10 +104,11 @@
                         border: 2px solid;
                         border-radius: 0.3em;
                         transition: 0.3s ease-in-out;
-                    }
-                    #getintouch:hover{
-                        color: $color4;
-                        background-color: $color2;
+
+                        &:hover{
+                            color: $color4;
+                            background-color: $color2;
+                        }
                     }
                 }
                 overflow: hidden;

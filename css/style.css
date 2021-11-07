@@ -464,7 +464,7 @@ footer #copyright {
 
 #home .s1 .div-1 .inner-div-1 .intro {
   color: #c5c6cc;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
@@ -472,8 +472,9 @@ footer #copyright {
   display: inline-block;
   cursor: pointer;
   font-family: 'Otomanopee One', sans-serif;
+  line-height: 0rem;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #68fbf1;
 }
 
@@ -556,8 +557,12 @@ footer #copyright {
 }
 
 #home .s1 .div-1 .inner-div-1 .intro .desig {
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: 0.85rem;
+  line-height: 2.5rem;
+  padding-bottom: 1rem;
 }
 
 #home .s1 .div-1 .inner-div-1 .intro #getintouch {
