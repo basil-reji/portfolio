@@ -83,7 +83,7 @@
                     .desig{
                         font-family: $font3;
                         font-size: 1rem;
-                        font-weight: 500;
+                        font-weight: 600;
                         letter-spacing: 0.85rem;
                         line-height: 2.5rem;
                         padding-bottom: 1rem;
@@ -111,7 +111,6 @@
                         }
                     }
                 }
-                overflow: hidden;
             }
             .inner-div-2{
                 pointer-events: none;
@@ -154,8 +153,6 @@
                 justify-content: center;
                 align-items: center;
                 .quote_box{
-                    @import "./effects/2d-transitions/grow";
-                    @include grow();
                     min-height: 13rem;
                     width: 80%;
                     background-color: $color5;
@@ -181,10 +178,11 @@
                             margin: 1rem 1.5rem;
                         }
                     }
-                    transition: 0.5s ease-in-out;
+                    transition: all 0.5s ease-in;
 
                     &:hover{
                         box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.5);
+                        transform: scale(1.05)
                     }
                 }
             }
@@ -192,16 +190,20 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                position: relative;
                 .highlight{
                     height: auto;
                     background-color: rgba($color: $color3, $alpha: 0.9);
                     width: auto;
                     padding: 2.5rem;
+                    position: relative;
                     .highlights{
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        position: relative;
                         .h_box{
+                            position: relative;
                             cursor: pointer;
                             margin: 1rem;
                             display: flex;
@@ -210,19 +212,39 @@
                             width: 10rem;
                             height: 10rem;
                             border-radius: 0.5rem;
+                            overflow: hidden;
+                            .h_text{
+                                color: $color1;
+                                z-index: 2;
+                                text-align: center;
+                                pointer-events: none;
+                                opacity: 0.3;
+                            }
                             .highlight_box{
+                                position: absolute;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 width: 100%;
                                 height: 100%;
                                 font-weight: 600;
-                                color: $color1;
                                 border: 1px solid $color4;
                                 border-radius: 0.5rem;
 
                                 padding: 0.5rem;
                                 text-align: center;
+                                transition: all 0.3s ease-in-out;
+
+                                &:hover{
+                                    transform: scale(1.1);
+                                }
+
+                                &::before{
+                                    position: absolute;
+                                    background-color: #000;
+                                    width: 100%;
+                                    height: 100%;
+                                }
                             }
                             #highlight_1{
                                 background-image: linear-gradient(rgba($color: $color5, $alpha: 0.7),rgba($color: $color5, $alpha: 0.7)), url("../../assets/Images/Portfolio_Website.png") ;

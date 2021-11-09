@@ -26,6 +26,14 @@ html {
           box-sizing: border-box;
 }
 
+*::-moz-selection {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+*::selection {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 body {
   background: #c5c6cc;
   font-family: "Open Sans", sans-serif;
@@ -459,7 +467,6 @@ footer #copyright {
       -ms-flex-align: center;
           align-items: center;
   padding: 10% 0;
-  overflow: hidden;
 }
 
 #home .s1 .div-1 .inner-div-1 .intro {
@@ -559,7 +566,7 @@ footer #copyright {
 #home .s1 .div-1 .inner-div-1 .intro .desig {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.85rem;
   line-height: 2.5rem;
   padding-bottom: 1rem;
@@ -675,20 +682,6 @@ footer #copyright {
 }
 
 #home .s2 .s2_div .s2_div1 .quote_box {
-  /* Grow */
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-property: transform;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
   min-height: 13rem;
   width: 80%;
   background-color: #0b0c11;
@@ -697,13 +690,8 @@ footer #copyright {
   padding: 1rem 1.5rem;
   -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-#home .s2 .s2_div .s2_div1 .quote_box:hover {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 #home .s2 .s2_div .s2_div1 .quote_box .quote_area .quote_head {
@@ -728,6 +716,8 @@ footer #copyright {
 #home .s2 .s2_div .s2_div1 .quote_box:hover {
   -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 #home .s2 .s2_div .s2_div2 {
@@ -740,6 +730,7 @@ footer #copyright {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 #home .s2 .s2_div .s2_div2 .highlight {
@@ -747,6 +738,7 @@ footer #copyright {
   background-color: rgba(71, 162, 153, 0.9);
   width: auto;
   padding: 2.5rem;
+  position: relative;
 }
 
 #home .s2 .s2_div .s2_div2 .highlight .highlights {
@@ -759,9 +751,11 @@ footer #copyright {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 #home .s2 .s2_div .s2_div2 .highlight .highlights .h_box {
+  position: relative;
   cursor: pointer;
   margin: 1rem;
   display: -webkit-box;
@@ -776,13 +770,23 @@ footer #copyright {
   width: 10rem;
   height: 10rem;
   border-radius: 0.5rem;
+  overflow: hidden;
   -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 
+#home .s2 .s2_div .s2_div2 .highlight .highlights .h_box .h_text {
+  color: #c5c6cc;
+  z-index: 2;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
 #home .s2 .s2_div .s2_div2 .highlight .highlights .h_box .highlight_box {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -795,11 +799,24 @@ footer #copyright {
   width: 100%;
   height: 100%;
   font-weight: 600;
-  color: #c5c6cc;
   border: 1px solid #212733;
   border-radius: 0.5rem;
   padding: 0.5rem;
   text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#home .s2 .s2_div .s2_div2 .highlight .highlights .h_box .highlight_box:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#home .s2 .s2_div .s2_div2 .highlight .highlights .h_box .highlight_box::before {
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
 }
 
 #home .s2 .s2_div .s2_div2 .highlight .highlights .h_box #highlight_1 {

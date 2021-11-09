@@ -22,6 +22,9 @@ html{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  &::selection{
+    background: rgba($color: #000, $alpha: 0.5);
+  }
 }
 
 body{
