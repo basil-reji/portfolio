@@ -12,8 +12,8 @@
     #logo{
         cursor: pointer;
         position: absolute;
-        left: 1.5rem;
-        top: 1rem;
+        left: 2rem;
+        top: 1.5rem;
         color: #fff;
         font-weight: 600;
         font-size: 1rem;
@@ -168,5 +168,127 @@ footer{
         font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
         font-size: 0.8rem;
         margin: auto;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    #nav-bar{
+        .nav_links{
+            li{
+                .nav-active{
+                    color: $color2;
+                }
+                a{
+                    @import "./effects/border-transitions/underline-from-center";
+                    @include underline-from-center();
+                }
+                button{
+                    @import "./effects/background-transitions/shutter-out-horizontal";
+                    @include shutter-out-horizontal();
+                    background: transparent;
+                }
+                a:hover{
+                    color: $color2;
+                }
+                button:hover{
+                    border-color: $color2;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+
+    #nav-bar{
+        pointer-events: none;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        #logo{
+            left: 2rem;
+            top: 2rem;
+        }
+        .nav_links{
+            position: absolute;
+            background: rgba($color: $color4, $alpha: 0.5);
+            backdrop-filter: blur(10px);
+            height: 100%;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;  
+            padding: 0;
+            margin: 0;
+            z-index: 5;      
+            li{
+                width: 20rem;
+                padding: 0.5rem;
+                margin: 0.1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .nav-active{
+                    background: $color2;
+                    color: $color4;
+                }
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    background: $color1;
+                    color: $color4;
+                    font-size: 1.3rem;
+                    transition: all 0.3s ease;
+                }
+                button{
+                    width: 20rem;
+                    padding: 0.5rem 0.6rem;
+                    margin: 2.5rem 0rem;
+                    font-size: 1.3rem;
+                }
+                a:hover{
+                    color: $color5;
+                    background-color: $color2;
+                    width: 100%;
+                }
+            }
+            clip-path: circle(0px at 100% 0);
+            transition: all 0.8s ease-in-out;
+        }
+        .nav_links.open{
+            clip-path: circle(2000px at 100% 0);
+        }
+    }
+    .hamburger
+    {
+        pointer-events: all;
+        position: absolute;
+        cursor: pointer;
+        right: 2em;
+        top: 1.5em;
+        z-index: 5;
+        .hamburger_line{
+            margin: 0.4em;
+            height: 0.3em;
+            width: 2.3em;
+            background-color: $color1;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+    .hamburger.open{
+        .hamburger_line:nth-child(1){
+            background-color: transparent;
+        }
+        .hamburger_line:nth-child(2){
+            height: 0.2em;
+            transform: translateY(0.5em) rotate(45deg);
+        }
+        .hamburger_line:nth-child(3){
+            height: 0.2em;
+            transform: rotate(-45deg);
+        }
     }
 }

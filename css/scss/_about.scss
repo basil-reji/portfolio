@@ -1,39 +1,150 @@
-#about{
-    .s1{
+#about {
+    background-color: $color1;
+    canvas {
+        background-color: #000;
+        background-image: radial-gradient(
+                circle at top right,
+                rgba(121, 68, 154, 0.13),
+                transparent
+            ),
+            radial-gradient(circle at 20% 80%, $color4, transparent);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .s1 {
         min-height: 100vh;
         width: 100%;
-        background: rgba($color: $color5, $alpha: 1) ;
-        .div1{
+        background: rgba($color: $color5, $alpha: 0.9);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .hdiv {
+            margin: 6rem 0rem;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            position: absolute;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-
-            .in-div{
-                width: 85%;
+            .in-div1 {
+                width: 22rem;
                 height: auto;
+                padding: 2rem 2.7rem;
+                padding-bottom: 1rem;
+                background: rgba(255, 255, 255, 0.06);
+                border-radius: 0.1rem;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5.9px);
+                -webkit-backdrop-filter: blur(5.9px);
+                border: 1px solid rgba(255, 255, 255, 0.29);
+                z-index: 3;
+                transform: translateX(10%);
+                color: #fff;
 
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                h1{
-                    padding: 1rem;
-                    color: rgba($color: $color2 , $alpha: 1.0);
-                    font-size: 2rem;
-                    font-weight: 800;
-                    font-family: $font2;
-                }
-                p{
-                    padding: 1rem;
-                    color: rgba($color: $color1, $alpha: 1.0);
-                    font-size: 1.2rem;
+                h5 {
+                    font-size: larger;
                     font-family: $font3;
-                    
+                    font-weight: 550;
+                    text-transform: uppercase;
+                }
+                .name {
+                    color: $color2;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    font-family: $font3;
+                    font-size: 0.8rem;
                 }
             }
+            .in-div2 {
+                transform: translateX(-5%);
+                .img {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+
+                    img {
+                        width: 95%;
+                        z-index: 2;
+                    }
+
+                    &::after {
+                        width: 95%;
+                        height: 100%;
+                        position: absolute;
+                        content: "";
+                        right: 0.1rem;
+                        bottom: -1rem;
+                        background-color: $color4;
+                        z-index: 1;
+                        box-shadow: 12px 15px 40px -3px rgba(0, 0, 0, 0.1);
+                    }
+                }
+            }
+        }
+    }
+    .s2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        margin: 2rem;
+        padding: 2rem 3rem;
+        border: 0.3rem solid $color5;
+
+        h3 {
+            color: $color5;
+            text-transform: uppercase;
+            margin: 2rem;
+            transform: translateY(-40%);
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -0.5rem;
+                left: 0;
+                width: 100%;
+                height: 0.2rem;
+                background-color: $color5;
+            }
+        }
+
+        p{
+            font-size: 1.1rem;
+            line-height: 2rem;
+            text-align-last: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #about {
+        .s1 {
+            .hdiv {
+                .in-div1 {
+                    transform: translateY(-10%);
+                }
+                .in-div2 {
+                    transform: translateY(5%);
+                }
+            }
+        }
+        .s2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            margin: 2rem;
+            padding: 2rem 3rem;
+            border: 0.3rem solid $color5;
         }
     }
 }

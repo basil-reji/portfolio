@@ -11,11 +11,11 @@ hamburger.addEventListener("click", () => {
 
 function toggleNavbar() {
     const body = document.querySelector('html');
-    if (body.style.overflow === "hidden") {
-        body.style.overflow = "auto";
+    if (body.style.overflowY === "hidden") {
+        body.style.overflowY = "auto";
         nav_bar.style.pointerEvents = "none";
     } else {
-        body.style.overflow = "hidden";
+        body.style.overflowY = "hidden";
         nav_bar.style.pointerEvents = "all";
     }
 }

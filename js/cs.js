@@ -16,7 +16,7 @@ canvas.width = innerWidth;
 canvas.height = innerHeight;
 
 function texts(color) {
-  ctx.font = "10vh Roboto";
+  ctx.font = "8vh Roboto";
   ctx.shadowBlur = 30;
   ctx.shadowColor = color;
   ctx.fillStyle = color;
